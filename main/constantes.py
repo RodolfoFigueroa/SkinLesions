@@ -1,4 +1,4 @@
-main_dir = "../datos"
+main_dir = "./datos"
 data_dir = main_dir + "/imagenes_train"
 dest_dir = main_dir + "/imagenes_train_mod"
 
