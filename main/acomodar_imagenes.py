@@ -1,8 +1,8 @@
 import os
 import shutil
 
-from main.constantes import data_dir, dest_dir
-from main.lectura_data import metadata
+from constantes import data_dir, dest_dir
+from lectura_data import metadata
 
 label = metadata["label"].unique()
 
