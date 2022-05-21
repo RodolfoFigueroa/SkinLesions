@@ -1,4 +1,6 @@
-main_dir = "./datos"
+from pathlib import Path
+
+main_dir = Path(__file__).parent / "..data/"
 data_dir = main_dir + "/imagenes_train"
 dest_dir = main_dir + "/imagenes_train_mod"
 
