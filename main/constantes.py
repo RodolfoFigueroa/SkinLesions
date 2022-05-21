@@ -2,8 +2,8 @@ from pathlib import Path
 
 main_dir = Path(__file__).parent / "..data/"
 print(main_dir)
-data_dir = main_dir + "/imagenes_train"
-dest_dir = main_dir + "/imagenes_train_mod"
+data_dir = main_dir / "/imagenes_train"
+dest_dir = main_dir / "/imagenes_train_mod"
 
 test_size = 0.2
 val_size = 0.2
