@@ -1,6 +1,6 @@
 from pathlib import Path
 
-main_dir = Path(__file__).parent / "../data"
+main_dir = Path(__file__).parent / "../datos"
 main_dir = main_dir.resolve()
 main_dir = str(main_dir)
 
