@@ -10,5 +10,5 @@ for i in label:
     os.mkdir(dest_dir + str(i))
     imagenes = metadata.loc[metadata['label'] == i, 'image_id']
     for id in imagenes:
-        shutil.copyfile((data_dir + "/"+ id + ".jpg"), 
-                        (dest_dir + str(i) + "/" + id + ".jpg"))
+        shutil.copyfile((data_dir + "/" + id + ".jpg"), 
+                        (dest_dir + "/" + str(i) + "/" + id + ".jpg"))
