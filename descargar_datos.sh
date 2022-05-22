@@ -11,7 +11,7 @@ unzip -q ./download/HAM10000_images_part_1.zip -d ./datos/imagenes_train
 unzip -q ./download/HAM10000_images_part_2.zip -d ./datos/imagenes_train
 unzip -q ./download/ISIC2018_Task3_Test_Images.zip -d ./datos/imagenes_test
 
-mv -q ./download/HAM10000_metadata ./datos
+mv ./download/HAM10000_metadata ./datos
 
 rm -r ./datos/imagenes_test/__MACOSX
 mv ./datos/imagenes_test/ISIC2018_Task3_Test_Images/* ./datos/imagenes_test 
