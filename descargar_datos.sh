@@ -18,3 +18,5 @@ mv ./datos/imagenes_test/ISIC2018_Task3_Test_Images/* ./datos/imagenes_test
 rm -r ./datos/imagenes_test/ISIC2018_Task3_Test_Images
 
 rm -r ./download
+
+mkdir ./datos/imagenes_train_mod
