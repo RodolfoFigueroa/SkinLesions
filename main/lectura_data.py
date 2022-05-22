@@ -4,7 +4,7 @@ from sklearn.preprocessing import LabelEncoder
 
 from constantes import main_dir
 
-metadata = pd.read_csv(main_dir + '/HAM10000_metadata.tab', delimiter="\t",
+metadata = pd.read_csv(main_dir + '/HAM10000_metadata',
                         names = ["lesion_id", "image_id", "dx", "dx_type",
                         "age", "sex", "localization", "label"])
 
