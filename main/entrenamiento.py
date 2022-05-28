@@ -10,7 +10,7 @@ from constantes import checkpoints_dir, logs_dir
 tb_logger = pl_loggers.TensorBoardLogger(save_dir=logs_dir)
 
 model = RedNeuronal(class_weights)
-trainer = pl.Trainer(accelerator="gpu", precision = 16, 
+trainer = pl.Trainer(accelerator="gpu", 
                     default_root_dir = checkpoints_dir, 
                     callbacks = [EarlyStopping(monitor = "val_loss", mode = "min")],
                     logger = tb_logger)
