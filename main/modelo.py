@@ -1,4 +1,5 @@
 import torch
+import torchmetrics
 
 import pytorch_lightning as pl
 import torch.nn as nn
