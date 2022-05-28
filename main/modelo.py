@@ -1,10 +1,11 @@
-import torch.nn as nn
-from torch.nn import functional as F
-import torch.optim as optim
 import torch
 
 import pytorch_lightning as pl
-import torchmetrics
+import torch.nn as nn
+import torch.optim as optim
+
+from constantes import learning_rate
+from torch.nn import functional as F
 
 class RedNeuronal(pl.LightningModule):
     def __init__(self, class_weights):
@@ -47,7 +48,7 @@ class RedNeuronal(pl.LightningModule):
         return y_hat
 
     def configure_optimizers(self):
-        return optim.Adam(self.parameters(), lr = 0.02)
+        return optim.Adam(self.parameters(), lr = learning_rate)
 
     def forward(self, x):
         x = F.max_pool2d(F.relu(self.conv1(x)), (2, 2))
