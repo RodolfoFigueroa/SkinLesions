@@ -19,3 +19,5 @@ shape = (224, 224)
 
 checkpoints_dir = main_dir + "/checkpoints"
 logs_dir = main_dir + "/logs"
+
+learning_rate = 1e-5
