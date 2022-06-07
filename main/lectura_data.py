@@ -6,12 +6,12 @@ metadata = pd.read_csv(main_dir + '/datos/HAM10000_metadata')
 
 label_map = {
     akiec: 0,
-    bcc: 1, 
-    bkl: 2, 
-    df: 3, 
-    mel: 4, 
-    nv: 5, 
-    vasc: 6
+    bcc: 0, 
+    bkl: 0, 
+    df: 0, 
+    mel: 1, 
+    nv: 0, 
+    vasc: 0
 }
  
 metadata["label"] = metadata["dx"].map(label_map)
