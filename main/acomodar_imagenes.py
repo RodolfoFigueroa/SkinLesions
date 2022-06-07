@@ -17,9 +17,30 @@ parser.add_argument(
 
 label = metadata["label"].unique()
 
-for i in label:
-    os.mkdir(dest_dir + "/" + str(i))
-    imagenes = metadata.loc[metadata['label'] == i, 'image_id']
-    for id in imagenes:
-        shutil.copyfile((data_dir + "/" + id + ".jpg"), 
-                        (dest_dir + "/" + str(i) + "/" + id + ".jpg"))
+if binary:
+    os.mkdir(dest_dir + "/0")
+    os.mkdir(dest_dir + "/1")
+
+    imagenes_true = metadata.loc[metadata['label'] == 4, 'image_id']
+    imagenes_false = metadata.loc[metadata['label'] != 4, 'image_id']
+    
+    for id in imagenes_true:
+        shutil.copyfile(
+            (data_dir + "/" + id + ".jpg"), 
+            (dest_dir + "/1/" + id + ".jpg")
+        )
+    for id in imagenes_false:
+        shutil.copyfile(
+            (data_dir + "/" + id + ".jpg"), 
+            (dest_dir + "/0/" + id + ".jpg")
+        )
+
+else:
+    for i in label:
+        os.mkdir(dest_dir + "/" + str(i))
+        imagenes = metadata.loc[metadata['label'] == i, 'image_id']
+        for id in imagenes:
+            shutil.copyfile(
+                (data_dir + "/" + id + ".jpg"), 
+                (dest_dir + "/" + str(i) + "/" + id + ".jpg")
+            )
